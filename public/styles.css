@@ -1,0 +1,15 @@
+body{
+    position:relative;
+}
+
+#login-nav,#register-nav,#logout-nav {
+    /* firebase will take care of toggling display*/
+    display:none;
+}
+
+.toaster-alert{
+    transition: all 1s ease-in .5s;
+    position:absolute;
+    top:25px;
+    left:35%;
+}

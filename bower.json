@@ -1,0 +1,22 @@
+{
+  "name": "fire-chat",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Saketh Varma"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "firebase": "^3.7.5"
+  }
+}
