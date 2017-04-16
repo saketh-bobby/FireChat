@@ -2,7 +2,7 @@ body{
     position:relative;
 }
 
-#login-nav,#register-nav,#logout-nav {
+#login-nav,#register-nav,#logout-nav,.settings-nav,#chat-nav{
     /* firebase will take care of toggling display*/
     display:none;
 }
@@ -12,4 +12,26 @@ body{
     position:absolute;
     top:25px;
     left:35%;
+}
+
+#chat-room{
+    height: 80vh;
+    overflow-y:scroll;
+}
+
+#message-box{
+    width: 93%;
+}
+
+.msg {
+    clear:both;
+    padding: 5px 15px;
+    margin-bottom: 5px;
+}
+
+.msg-right{
+    float:right;
+}
+.msg-left{
+    float:left;
 }

@@ -1,6 +1,6 @@
 
 function ToastNotifier(){
-
+	this.notifier = null;
 }
 
 ToastNotifier.prototype.initNotifier = function(){
@@ -12,11 +12,15 @@ ToastNotifier.prototype.display = function(className,message){
 	this.notifier.innerText = message;
 	this.notifier.classList.add(className);
 	document.body.appendChild(this.notifier);
-	setTimeout(function () {
+	setTimeout(() => {
 		document.body.removeChild(this.notifier);
-	}.bind(this), 10000);
+		this.notifier = null;
+	}, 2000);
 };
 
+ToastNotifier.prototype.exists = function(){
+	return this.notifier;
+};
 
 // export default ToastNotifier;
 
