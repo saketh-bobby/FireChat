@@ -1,0 +1,49 @@
+<div>
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary btn-lg"
+	        data-toggle="modal" data-target="#add-friend-modal">
+		<span class="glyphicon glyphicon-user"></span>
+		Add Friend
+	</button>
+</div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Friends</h3>
+	</div>
+	<div class="panel-body">
+		<ul id="friends-list" class="nav nav-pills">
+
+		</ul>
+	</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="add-friend-modal" tabindex="-1" role="dialog" aria-labelledby="add-friend">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+				        aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="add-friend">Add new Friend</h4>
+			</div>
+			<form id="add-friend-form">
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="friend-name">Friend's Name</label>
+						<input type="text" class="form-control" id="friend-name" placeholder="Friend's Name">
+					</div>
+					<div class="form-group">
+						<label for="friend-email">Email address</label>
+						<input type="email" class="form-control" id="friend-email" placeholder="Email">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">Add to Contacts</button>
+					<button type="submit" class="btn btn-primary" data-dismiss="modal">Close</button>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</div>
+

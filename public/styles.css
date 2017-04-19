@@ -19,16 +19,15 @@ body{
     overflow-y:scroll;
 }
 
-#message-box{
-    width: 93%;
-}
 
 .msg {
     clear:both;
     padding: 5px 15px;
     margin-bottom: 5px;
 }
-
+.msg:hover{
+    cursor: pointer;
+}
 .msg-right{
     float:right;
 }

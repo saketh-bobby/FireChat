@@ -7,13 +7,11 @@
 	    loginNav      = document.getElementById('login-nav'),
 	    registerNav   = document.getElementById('register-nav'),
 	    logoutNav     = document.getElementById('logout-nav'),
-	    chatNav= document.getElementById('chat-nav'),
-	    bodyContainer = document.getElementById('body-container'),
-	    navLinks      = [navbarBrand, loginNav, registerNav,chatNav];
+	    chatNav = document.getElementById('chat-nav'),
+	    friendsNav = document.getElementById('friends-nav'),
+	    navLinks      = [navbarBrand, loginNav, registerNav,chatNav,friendsNav];
 	// for loading default state home
-	//nasty bug here
 	handleStateChange(firechat,'home',true);
-
 	navLinks.forEach(function (navElm) {
 		navElm.addEventListener('click', function (evt) {
 			evt.preventDefault();
@@ -22,7 +20,7 @@
 			handleStateChange(firechat,state,true);
 		});
 	});
-	// logout special no
+	// logout special
 	logoutNav.addEventListener('click', function (evt) {
 		evt.preventDefault();
 		firechat.signout();
@@ -30,7 +28,6 @@
 	});
 
 	window.onpopstate = function(evt){
-		console.log(evt);
 		handleStateChange(firechat,evt.state);
 	};
 })();

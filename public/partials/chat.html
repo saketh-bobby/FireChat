@@ -1,8 +1,26 @@
-<div class="container chat-container">
-	<div class="well " id="chat-room">
+<div class="container">
+	<div class="chat-container row">
+		<div id="chat-sidebar" class="col-md-3">
+			<ul class="nav nav-pills nav-stacked" id="friends-list">
+			</ul>
+		</div>
+		<div class="well col-md-9" >
+			<div id="chat-room">
+
+			</div>
+			<div class="row">
+				<form>
+					<div class="col-md-10">
+						<input type="text" class="form-control" id="message-box"
+						       placeholder="Enter your message here...">
+					</div>
+					<div class="col-md-2">
+						<button class="btn btn-primary" id="send-btn">SEND</button>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
-	<form class="form-inline">
-		<input type="text" class="form-control" id="message-box" placeholder="Enter your message here...">
-		<button class="btn btn-primary" id="send-btn">SEND</button>
-	</form>
 </div>
+
+
