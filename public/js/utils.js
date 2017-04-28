@@ -68,39 +68,7 @@ function loginStateHandler(appInstance){
 }
 
 function chatStateHandler(appInstance){
-	// load friends from list
-	appInstance
-		.getAllFriends('#chat-sidebar #friends-list')
-		.then(initChat);
-	/////////////////
-	function initChat() {
-		// add click listener for each chat room to be clicked
-		let friends = document.querySelectorAll('#friends-list li');
-		let sendButton = document.querySelector('#send-btn');
-		let messageBox = document.querySelector('#message-box');
-		friends.forEach(function (node) {
-			node.addEventListener('click', function (evt) {
-				let recvUid = evt.target.dataset.id;
-				evt.preventDefault();
-				// for all others remove active class
-				friends.forEach(function (friendNode) {
-					friendNode.classList.remove('active');
-				});
-				evt.target.parentNode.classList.add('active');
-				// retrieve messages for friend
-				appInstance.loadMessages(recvUid);
-				sendButton.addEventListener('click',function(evt) {
-						evt.preventDefault();
-						//todo:filter user msg content by escaping chars
-						if (messageBox.value != '') {
-							appInstance.sendMessage(recvUid,messageBox.value);
-							messageBox.value = '';
-						}
-					}
-				);
-			});
-		});
-	}
+	appInstance.loadChat();
 }
 
 function friendStateHandler(appInstance){
